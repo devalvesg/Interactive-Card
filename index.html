@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="cartao">
+
+      <div class="frente">
+        <img src="./images/bg-card-front.png" alt="Frente do Cartão" width="400px">
+        <div class="logoCartao"></div>
+        <div class="logoMenor"></div>
+        <div id="numCartao"></div>
+        <div id="nomeCartao"></div>
+        <div id="dataCard"></div>
+      </div>
+
+      <div class="atras">
+        <img src="./images/bg-card-back.png" alt="Atrás do Cartão" width="400px">
+        <div id="cvcCard">
+          
+        </div>
+      </div>
+
+    </div>
+    <div id="info">
+      <div class="legenda">CARDHOLDER NAME</div>
+      <input type="text" onchange="Resposta()" id="cardName" class="nome" placeholder=" e.g. Jane Appleseed">
+      <br><br>
+      <div class="legenda">CARD NUMBER</div>
+      <input type="number" onchange="Resposta()" id="cardNumber" class="numero" placeholder=" e.g. 1234 5678 9123 0000"
+        pattern="/(\d{4})/g, "$1 ""> 
+      <div class="errors" id="error"></div>
+      <br><br><br>
+      <div>
+        <div class="exp">EXP. DATE (MM/YY)</div>
+        <div class="cvc">CVC</div>
+        <br>
+        <input type="number" onchange="Resposta()" class="data" id="month" placeholder=" MM">
+        <input type="number" onchange="Resposta()" class="data" id="year" placeholder=" YY">
+        <input type="number" onchange="Resposta()" class="inputCvc" id="cvc" placeholder=" e.g.123">
+        <div class="errors" id="errorData"></div>
+        <div id="errorCvc"></div>
+      </div>
+      <br><br>
+      <button autofocus onclick="TestarDados()">Confirm</button>
+    </div>
+    <div id="loadingPage">
+      <span></span>
+    </div>
+    <div id="thankyou">
+      <div id="completo">
+        <img src="./images/icon-complete.svg" alt="Completed">
+      </div>
+      <h1>THANK YOU!</h1>
+      <div class="textoFinal">We've added your card details</div>
+      <button onclick="Continuar()" >Continue</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 500px;
+    background-position: left;
+    display: flex;
+    background: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+
+.cartao {
+    display: flex;
+}
+
+.frente {
+    margin-left: 200px;
+    margin-top: 150px;
+    position: relative;
+}
+
+.atras {
+    position: relative;
+    margin-top: 400px;
+    right: 300px;
+}
+
+#numCartao {
+    font-size: 25px;
+    position: absolute;
+    display: flex;
+    top: 120px;
+    left: 25px;
+    letter-spacing: 4px;
+    color: white;
+}
+
+#nomeCartao {
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    top: 180px;
+    left: 25px;
+    letter-spacing: 2px;
+    color: hsl(270, 3%, 87%);
+    ;
+}
+
+#dataCard {
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    top: 180px;
+    left: 330px;
+    color: hsl(270, 3%, 87%);
+}
+
+#cvcCard {
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    top: 100px;
+    left: 320px;
+    color: hsl(270, 3%, 87%);
+    letter-spacing: 2px;
+}
+
+.logoCartao {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 25px;
+    left: 30px;
+    border: 1px solid hsl(270, 3%, 87%);
+    background-color: hsl(270, 3%, 87%);
+    position: absolute;
+    display: flex;
+}
+
+.logoMenor {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    top: 37px;
+    left: 90px;
+    border: 1px solid hsl(270, 3%, 87%);
+    position: absolute;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+#info {
+    width: 300px;
+    font-size: 12px;
+    margin-top: 250px;
+    height: 300px;
+    position: absolute;
+    margin-left: 850px;
+}
+
+
+.errors {
+    height: 20px;
+    color: red;
+    display: flex;
+    position: absolute;
+}
+
+#errorCvc {
+    margin-left: 180px;
+    position: absolute;
+    color: red;
+}
+
+
+input {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.438);
+}
+
+input::placeholder {
+    color: hsl(270, 10%, 87%);
+}
+
+.cvc {
+    display: inline;
+    margin-left: 70px;
+}
+
+.inputCvc {
+    margin-left: 42px;
+    width: 110px;
+}
+
+.exp {
+    display: inline;
+    margin-top: 5px;
+}
+
+.data {
+    width: 60px;
+    margin-top: 5px;
+}
+
+.nome {
+    width: 290px;
+}
+
+.numero {
+    width: 290px;
+}
+
+.legenda {
+    margin-bottom: 5px;
+}
+
+button {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 40px;
+    color: white;
+    background-color: hsl(278, 68%, 11%);
+    border-radius: 5px;
+    border: transparent;
+    transition: .35s;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.10);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#thankyou {
+    width: 300px;
+    font-size: 12px;
+    margin-top: 250px;
+    height: 300px;
+    position: absolute;
+    margin-left: 850px;
+    display: none;
+}
+
+#completo {
+    margin: 0 auto;
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+#thankyou h1 {
+    width: 180px;
+    margin: 0 auto;
+    color: hsl(278, 68%, 11%);
+    letter-spacing: 4px;
+}
+
+.textoFinal {
+    margin: 15px auto;
+    width: 220px;
+    font-size: 15px;
+    color: hsl(279, 6%, 55%);
+}
+
+#thankyou button {
+    margin-top: 35px;
+}
+
+
+#loadingPage {
+    display: none;
+    border-radius: 50%;
+    animation: spin 1.4s linear infinite;
+    border: 14px solid hsl(270, 3%, 87%);
+    border-top: 14px solid hsl(278, 68%, 11%);
+    margin: auto 0;
+    width: 80px;
+    position: relative;
+    height: 80px;
+    box-shadow: 1px 2px 8px 1px black;
+    right: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media(max-width: 375px) {
+    body {
+        height: 100vh;
+        width: 375px;
+        background-position: top;
+        display: flex;
+        background: url(./images/bg-main-mobile.png);
+        background-repeat: no-repeat;
+    }
+
+    .cartao {
+        display: flex;
+    }
+
+    .frente {
+        right: 180px;
+        bottom: 10px;
+    }
+
+    .frente img {
+        position: relative;
+        max-width: 250px;
+        height: 130px;
+        z-index: 1;
+    }
+
+    .atras img {
+        position: relative;
+        max-width: 250px;
+        height: 130px;
+    }
+
+    .atras {
+        right: 380px;
+        bottom: 340px;
+    }
+
+    #info {
+        width: 300px;
+        font-size: 12px;
+        height: 300px;
+        position: absolute;
+        margin-top: 320px;
+        margin-left: 35px;
+    }
+
+
+    #numCartao {
+        font-size: 14px;
+        position: absolute;
+        display: flex;
+        top: 75px;
+        left: 15px;
+        color: white;
+        z-index: 2;
+    }
+
+    #nomeCartao {
+        font-size: 10px;
+        position: absolute;
+        display: flex;
+        top: 105px;
+        left: 15px;
+        color: hsl(270, 3%, 87%);
+        z-index: 2;
+    }
+
+    #dataCard {
+        font-size: 10px;
+        position: absolute;
+        display: flex;
+        top: 105px;
+        left: 210px;
+        color: hsl(270, 3%, 87%);
+        z-index: 2;
+    }
+
+    #cvcCard {
+        font-size: 10px;
+        position: absolute;
+        display: flex;
+        top: 58px;
+        left: 200px;
+        color: hsl(270, 3%, 87%);
+        letter-spacing: 2px;
+        z-index: 2;
+    }
+
+    .logoCartao {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        top: 15px;
+        left: 15px;
+        border: 1px solid hsl(270, 3%, 87%);
+        background-color: hsl(0, 0%, 100%);
+        position: absolute;
+        display: flex;
+        z-index: 2;
+    }
+
+    .logoMenor {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        top: 23px;
+        left: 50px;
+        border: 1px solid hsl(270, 3%, 87%);
+        position: absolute;
+        display: flex;
+        z-index: 2;
+    }
+
+    /* #loadingPage {
+        display: flex;
+        border-radius: 50%;
+        animation: spin 1.4s linear infinite;
+        border: 15px solid hsl(270, 3%, 87%);
+        border-top: 15px solid hsl(278, 68%, 11%);
+        margin: auto 0;
+        max-width: 800px;
+        width: 200px !important; 
+        height: 20px;
+        box-shadow: 1px 2px 8px 1px black;
+        right: 500px;
+    } */
+
+    #thankyou {
+        width: 300px;
+        font-size: 12px;
+        margin-top: 350px;
+        height: 300px;
+        position: absolute;
+        margin-left: 37px;
+        display: none;
+    }
+    
+    #completo {
+        margin: 0 auto;
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    
+    #thankyou h1 {
+        width: 180px;
+        margin: 0 auto;
+        color: hsl(278, 68%, 11%);
+        letter-spacing: 4px;
+    }
+    
+    .textoFinal {
+        margin: 15px auto;
+        width: 220px;
+        font-size: 15px;
+        color: hsl(279, 6%, 55%);
+    }
+    
+    #thankyou button {
+        margin-top: 35px;
+    }
+}
