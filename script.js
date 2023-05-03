@@ -1,5 +1,6 @@
 function TestarDados() {
     let nome = document.getElementById("cardName").value;
+    nome = nome.toUpperCase();
     document.getElementById("nomeCartao").innerHTML = nome;
 
     let card_number = document.getElementById("cardNumber").value;

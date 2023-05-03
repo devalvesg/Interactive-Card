@@ -93,7 +93,6 @@ body {
 
 .container {
     display: flex;
-    width: 100vw;
 }
 
 #info {
@@ -220,7 +219,6 @@ input::-webkit-inner-spin-button {
     margin-top: 35px;
 }
 
-
 #loadingPage {
     display: none;
     border-radius: 50%;
@@ -245,14 +243,15 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media(max-width: 375px) {
+@media(max-width: 600px) {
     body {
         height: 100vh;
         width: 375px;
         background-position: top;
         display: flex;
-        background: url(./images/bg-main-mobile.png);
+        background: url(./images/bg-main-mobilee.png);
         background-repeat: no-repeat;
+        background-size: 600px 250px;
     }
 
     .cartao {
@@ -260,8 +259,7 @@ input::-webkit-inner-spin-button {
     }
 
     .frente {
-        right: 180px;
-        bottom: 10px;
+        right: 60px;
     }
 
     .frente img {
@@ -278,8 +276,8 @@ input::-webkit-inner-spin-button {
     }
 
     .atras {
-        right: 380px;
-        bottom: 340px;
+        right: 260px;
+        bottom: 324px;
     }
 
     #info {
@@ -287,13 +285,13 @@ input::-webkit-inner-spin-button {
         font-size: 12px;
         height: 300px;
         position: absolute;
-        margin-top: 320px;
-        margin-left: 35px;
+        margin-top: 340px;
+        margin-left: 155px;
     }
 
 
     #numCartao {
-        font-size: 14px;
+        font-size: 15px;
         position: absolute;
         display: flex;
         top: 75px;
@@ -358,27 +356,27 @@ input::-webkit-inner-spin-button {
         z-index: 2;
     }
 
-    /* #loadingPage {
-        display: flex;
+    #loadingPage {
+        display: none;
         border-radius: 50%;
         animation: spin 1.4s linear infinite;
-        border: 15px solid hsl(270, 3%, 87%);
-        border-top: 15px solid hsl(278, 68%, 11%);
-        margin: auto 0;
-        max-width: 800px;
-        width: 200px !important; 
-        height: 20px;
+        border: 10px solid hsl(270, 3%, 87%);
+        border-top: 10px solid hsl(278, 68%, 11%);
+        width: 40px;
+        position: relative;
+        height: 40px;
         box-shadow: 1px 2px 8px 1px black;
-        right: 500px;
-    } */
+        right: 430px;
+        bottom: 0px;
+    }
 
     #thankyou {
         width: 300px;
         font-size: 12px;
-        margin-top: 350px;
+        margin-top: 370px;
         height: 300px;
         position: absolute;
-        margin-left: 37px;
+        margin-left: 157px;
         display: none;
     }
     
